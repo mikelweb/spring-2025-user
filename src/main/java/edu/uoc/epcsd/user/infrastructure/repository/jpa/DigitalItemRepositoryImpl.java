@@ -52,6 +52,7 @@ public class DigitalItemRepositoryImpl implements DigitalItemRepository {
         digitalItemEntity.setLat(digitalItem.getLat());
         digitalItemEntity.setLon(digitalItem.getLon());
         digitalItemEntity.setLink(digitalItem.getLink());
+	digitalItemEntity.setStatus(digitalItem.getStatus());
         
         return jpaDigitalItemRepository.save(digitalItemEntity).getId(); 
 	}
