@@ -49,7 +49,9 @@ public class DigitalItemEntity implements DomainTranslatable<DigitalItem> {
                 .id(digitalItem.getId())
                 .description(digitalItem.getDescription())
                 .lat(digitalItem.getLat())
+                .lon(digitalItem.getLon())
                 .link(digitalItem.getLink())
+                .status(digitalItem.getStatus())
                 .build();
     }
 
@@ -59,7 +61,9 @@ public class DigitalItemEntity implements DomainTranslatable<DigitalItem> {
                 .id(this.getId())
                 .description(this.getDescription())
                 .lat(this.getLat())
+                .lon(this.getLon())
                 .link(this.getLink())
+                .status(this.getStatus())
                 .digitalSessionId(this.getDigitalSession().getId())
                 .build();
     }
