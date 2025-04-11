@@ -74,7 +74,7 @@ public class DigitalItemServiceImpl implements DigitalItemService {
 	@Override
 	public void approvePendingDigitalItem(Long digitalItemId) {
 		DigitalItem digitalItem = digitalItemRepository.getDigitalItemById(digitalItemId).orElseThrow(IllegalArgumentException::new);
-        if(digitalItem.getStatus().equals(DigitalItemStatus.REVIEW_PENDING)) {
+        if(!digitalItem.getStatus().equals(DigitalItemStatus.REVIEW_PENDING)) {
         	throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The specified digital item with ID " + digitalItemId + " is not under review status.");
         }
         digitalItem.setStatus(DigitalItemStatus.AVAILABLE);
@@ -85,7 +85,7 @@ public class DigitalItemServiceImpl implements DigitalItemService {
 	@Override
 	public void rejectPendingDigitalItem(Long digitalItemId) {
 		DigitalItem digitalItem = digitalItemRepository.getDigitalItemById(digitalItemId).orElseThrow(IllegalArgumentException::new);
-        if(digitalItem.getStatus().equals(DigitalItemStatus.REVIEW_PENDING)) {
+        if(!digitalItem.getStatus().equals(DigitalItemStatus.REVIEW_PENDING)) {
         	throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "The specified digital item with ID " + digitalItemId + " is not under review status.");
         }
         digitalItem.setStatus(DigitalItemStatus.NOT_AVAILABLE);
