@@ -10,18 +10,18 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 public final class CreateDigitalItemRequest {
 	
-    @NotNull
+	@NotNull
     private final Long digitalSessionId;    
      
-    @NotBlank
+	@NotBlank
     private final String description;
 
-    @NotNull
+	@NotNull
     private final Long lat;
 	
-    @NotNull
+	@NotNull
     private final Long lon;
 	
-    @NotBlank
+	@NotBlank
     private final String link;
 }

@@ -1,4 +1,4 @@
-package edu.uoc.epcsd.user.application.rest.response;
+package edu.uoc.epcsd.user.infrastructure.repository.rest;
 
 import lombok.*;
 

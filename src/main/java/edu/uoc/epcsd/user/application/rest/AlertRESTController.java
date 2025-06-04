@@ -45,13 +45,11 @@ public class AlertRESTController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // Get alerts by Product ID and a given date
     @GetMapping("/byProductAndDate")
     @ResponseStatus(HttpStatus.OK)
     public List<Alert> getAlertsByProductAndDate(@RequestParam @NotNull Long productId, @RequestParam @NotNull @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate availableOnDate) {
-        // Log action
         log.trace("getAlertsByProductAndDate");
-        // call Service's method and pass product ID and date, then return list
+
         return alertService.findAlertsByProductAndDate(productId, availableOnDate);
     }
 
