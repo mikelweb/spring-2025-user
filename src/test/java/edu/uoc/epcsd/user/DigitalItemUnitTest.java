@@ -10,7 +10,7 @@ import edu.uoc.epcsd.user.domain.DigitalItemStatus;
 class DigitalItemUnitTest {
 
     @Test
-    public void newDigitalItemStatusAvailableUnitTest() {
+    public void henCreatingDigitalItem_thenStatusShouldBeAvailable() {
         // Given
         Long id = 1L;
         Long digitalSessionId = 1L;
