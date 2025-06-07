@@ -12,19 +12,20 @@ class DigitalItemUnitTest {
     @Test
     public void henCreatingDigitalItem_thenStatusShouldBeAvailable() {
         // Given
-        Long id = 1L;
-        Long digitalSessionId = 1L;
-        String description = "Description descr descr descr";
-        Long lat = 2L;
-        Long lon = 3L;
-        String link = "https://www.hgfcdyhgbkjnk.com/jkbcefjkcbefjkbcv";
+        final Long ID = 1L;
+        final Long DIGITALSESSIONID = 13L;
+        final String DESCRIPTION = "Description descr descr descr";
+        final Long LAT = 5224L;
+        final Long LON = 3423L;
+        final String LINK = "https://www.hgfcdyhgbkjnk.com/jkbcefjkcbefjkbcv";
         // When
-        DigitalItem digitalItem = DigitalItem.builder() .id(id)
-                .digitalSessionId(digitalSessionId)
-                .description(description)
-                .lat(lat)
-                .lon(lon)
-                .link(link)
+        DigitalItem digitalItem = DigitalItem.builder()
+                .id(ID)
+                .digitalSessionId(DIGITALSESSIONID)
+                .description(DESCRIPTION)
+                .lat(LAT)
+                .lon(LON)
+                .link(LINK)
                 .build();
         // Then
         assertThat(digitalItem.getStatus()).isEqualTo(DigitalItemStatus.AVAILABLE); }
