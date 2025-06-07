@@ -70,4 +70,18 @@ public class DigitalSessionServiceUnitTest {
         verify(digitalSessionRepository, times(1)).findDigitalSessionByUser(USERID);
     }
 
+    @Test
+    public void whenFindDigitalSessionByUser_withInvalidUserId_thenThrowUserNotFoundException() {
+        // Given
+        final Long USERID = 578L;
+        when(userRepository.findUserById(USERID)).thenReturn(Optional.empty());
+
+        // When / Then
+        assertThrows(
+            UserNotFoundException.class, () ->
+                digitalSessionService.findDigitalSessionByUser(USERID)
+        );
+        verify(userRepository, times(1)).findUserById(USERID);
+        verify(digitalSessionRepository, times(0)).findDigitalSessionByUser(USERID);
+    }
 }
