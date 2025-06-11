@@ -23,6 +23,14 @@ public class HexagonalArchitectureTest {
         .and().areAnnotatedWith(Service.class)
         .should().haveSimpleNameEndingWith("ServiceImpl");
 
+    @ArchTest
+    static final ArchRule onion_architecture_is_respected = onionArchitecture()
+        .domainModels("..domain..")
+        .domainServices("..domain.service..")
+        .applicationServices("..application..")
+        .adapter("persistence", "..infrastructure.repository..")
+        .adapter("rest", "..application.rest..");
+}
 
 
 
