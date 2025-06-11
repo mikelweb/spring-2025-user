@@ -1,8 +1,11 @@
 package edu.uoc.epcsd.user.application.rest;
 
 import edu.uoc.epcsd.user.application.rest.request.CreateDigitalSessionRequest;
+<<<<<<< Updated upstream
 import edu.uoc.epcsd.user.domain.Alert;
 import edu.uoc.epcsd.user.domain.DigitalItem;
+=======
+>>>>>>> Stashed changes
 import edu.uoc.epcsd.user.domain.DigitalSession;
 import edu.uoc.epcsd.user.domain.service.DigitalSessionService;
 import lombok.RequiredArgsConstructor;
