@@ -2,8 +2,11 @@ package edu.uoc.epcsd.user.application.rest;
 
 import edu.uoc.epcsd.user.application.rest.request.CreateDigitalSessionRequest;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import edu.uoc.epcsd.user.domain.Alert;
 import edu.uoc.epcsd.user.domain.DigitalItem;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 import edu.uoc.epcsd.user.domain.DigitalSession;
